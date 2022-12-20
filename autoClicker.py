@@ -1,12 +1,14 @@
 import pyautogui
-import keyboard
 import appJar
+import pyinput
+#not working
+from pyinput.keyboard import *
 
-# keyboard does not work
+# https://pynput.readthedocs.io/en/latest/keyboard.html#controlling-the-keyboard
 
 
 def buttonPress(btn):
-    if btn == 'Start(s)' or keyboard.is_pressed('s'):
+    if btn == 'Start(s)' or keyboard.press(Key.space):
         amount = app.getEntry('amount')
         btn = app.getRadioButton('click')
         if (btn == 'right button'):
