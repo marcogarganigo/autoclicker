@@ -6,7 +6,7 @@ import appJar
 
 
 def buttonPress(btn):
-    if btn == 'Start(s)' or keyboard.read_key('s') == 's':
+    if btn == 'Start(s)' or keyboard.is_pressed('s'):
         amount = app.getEntry('amount')
         btn = app.getRadioButton('click')
         if (btn == 'right button'):
